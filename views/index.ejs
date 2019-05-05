@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>Mon title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="/javascripts/index.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="d-flex flex-column align-items-center justify-content-center w-100" style="height:100vh;">
+        <h1>Authentification</h1>
+        <div class="d-flex flex-row">
+          <% if (user) { %>
+            <a href="/auth/signout" class="mx-3">Deconnexion</a>
+            <a href="/protected" class="mx-3">Protected</a>
+          <% } else { %>
+            <a href="/users/new" class="mx-3">Inscription</a>
+            <a href="/auth/signin/form" class="mx-3">Connexion</a>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
